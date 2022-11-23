@@ -1,11 +1,5 @@
 import unittest
 
-def main():
-    print(getName(3581))
-
-def greeting(name: str) -> str:
-    return 'Hello ' + name
-
 def getNameDigit(digit: int ) -> str:
     if digit < 0 or digit > 9 :
         raise TypeError()
@@ -50,7 +44,7 @@ class TestNameMethods(unittest.TestCase):
         self.assertEqual(getNameDigit(8),"eight")
         self.assertEqual(getNameDigit(9),"nine")
         self.assertEqual(getNameDigit(0),"zero")
-        
+
         with self.assertRaises(TypeError):
             getNameDigit(-1)
 
